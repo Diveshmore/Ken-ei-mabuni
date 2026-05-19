@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEN-EI-MABUNI SHITO-RYU KARATE | Exam Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.min.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="header-top">
+        <div class="header-logo">
+          <img src="assets/Logo and other images/India Associaion logo right.png" alt="">
+        </div>
+        <div class="header-brand">
+          <div class="brand-title" style="font-size: 38px;">KEN-EI-MABUNI SHITO-RYU KARATE-DO ASSOCIATION</div>
+        </div>
+        <div class="header-logo">
+          <img src="assets/Logo and other images/Maha Associaion logo Left.png" alt="">
+        </div>
+      </div>
+      <nav class="navbar" aria-label="Primary navigation">
+        <div class="site-title">KEN-EI-MABUNI</div>
+        <div class="nav-links" data-menu>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="Training.html">Training</a>
+          <a href="contact.html">Contact</a>
+          <a href="members.html">Members</a>
+          <a href="representative.html">Representative</a>
+          <a href="resources.html">Resources</a>
+          <a href="affiliations.html">Affiliations</a>
+          <a href="branches.html">Branches</a>
+          <a href="exam.html">Exam Form</a>
+        </div>
+        <div class="navbar-right">
+          <button class="theme-toggle" type="button" aria-label="Toggle theme"><span></span>Light</button>
+          <a href="https://wa.me/919850543090?text=Hello%20I%20am%20interested%20in%20Karate%20classes" target="_blank" class="whatsapp-btn">💬 WhatsApp</a>
+          <button class="menu-toggle" aria-expanded="false" aria-label="Open navigation">
+            <span></span>
+          </button>
+        </div>
+      </nav>
+      <div class="updates-ticker">
+        <div class="updates-ticker-content">
+          <div class="ticker-item">🎯 Spring Grading - Register Now!</div>
+          <div class="ticker-item">⚡ New Batch Starting - Beginner & Advanced Classes</div>
+          <div class="ticker-item">🏆 Congratulations to Recent Belt Promotions</div>
+          <div class="ticker-item">📢 Special Weekend Workshops - Self-Defense Focus</div>
+          <div class="ticker-item">🎯 Spring Grading - Register Now!</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <h2>Exam Registration Form</h2>
+          <p>Register for your grading exam and pay the fees to complete your registration.</p>
+        </div>
+
+        <div class="exam-form-container">
+          <form id="examForm">
+            <!-- Personal Information -->
+            <div class="form-section">
+              <h3>Personal Information</h3>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="fullname">Full Name</label>
+                  <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+                </div>
+                <div class="form-field">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="9xxxxxxxxx" required>
+                </div>
+                <div class="form-field">
+                  <label for="address">Address</label>
+                  <input type="text" id="address" name="address" placeholder="Your address" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Branch & Belt Selection -->
+            <div class="form-section">
+              <h3>Select Branch & Belt Level</h3>
+              <div class="form-grid form-full">
+                <div class="form-field form-full">
+                  <label for="branch">Select Your Branch</label>
+                  <select id="branch" name="branch" required>
+                    <option value="">-- Choose Branch --</option>
+                    <option value="Pune-Vishal">Pune - Vishal Nagar (Renshi Yogesh More)</option>
+                    <option value="Nashik-Gangapur">Nashik - Gangapur Road (Sensei Arvind Patil)</option>
+                    <option value="Nagpur-Dharampeth">Nagpur - Dharampeth (Coach Neha Sharma)</option>
+                  </select>
+                </div>
+                <div class="form-field form-full">
+                  <label for="belt">Current Belt Level</label>
+                  <select id="belt" name="belt" required>
+                    <option value="">-- Choose Belt --</option>
+                    <option value="white">White Belt (10 Kyu)</option>
+                    <option value="yellow">Yellow Belt (9 Kyu)</option>
+                    <option value="orange">Orange Belt (8 Kyu)</option>
+                    <option value="green">Green Belt (7 Kyu)</option>
+                    <option value="blue">Blue Belt (6 Kyu)</option>
+                    <option value="purple">Purple Belt (5 Kyu)</option>
+                    <option value="brown">Brown Belt (4-1 Kyu)</option>
+                    <option value="black">Black Belt (1st Dan)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fee Summary -->
+            <div class="form-grid form-full">
+              <div class="fee-summary">
+                <h4>Examination Fee</h4>
+                <div class="fee-item">
+                  <span>Branch Fee:</span>
+                  <span id="branchFee">Rs. 0</span>
+                </div>
+                <div class="fee-item">
+                  <span>Belt Level Fee:</span>
+                  <span id="beltFee">Rs. 0</span>
+                </div>
+                <div class="fee-item">
+                  <span>Registration Fee:</span>
+                  <span>Rs. 500</span>
+                </div>
+                <div class="fee-total">
+                  <span>Total Amount Due:</span>
+                  <span id="totalFee">Rs. 500</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="form-grid form-full">
+              <div class="payment-section">
+                <h4>Payment Status</h4>
+                <div class="payment-status pending" id="paymentStatus">
+                  <span class="payment-icon">⏳</span>
+                  <span>Payment Pending - Select a payment method to proceed</span>
+                </div>
+
+                <div class="payment-methods">
+                  <button type="button" class="payment-btn" onclick="simulatePayment('upi')">
+                    UPI Payment
+                  </button>
+                  <button type="button" class="payment-btn" onclick="simulatePayment('card')">
+                    Credit/Debit Card
+                  </button>
+                </div>
+
+                <input type="hidden" id="paymentDone" value="false">
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 2rem; grid-column: 1 / -1;">
+              <button type="submit" class="btn-primary" id="submitBtn" style="width: 100%; cursor: not-allowed; opacity: 0.5;">
+                Submit Form (Payment Required)
+              </button>
+              <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+                Your form will be saved as an Excel sheet after payment verification.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Copyright © 2026 KEN-EI-MABUNI SHITO-RYU KARATE</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const branchFees = {
+      'Pune-Vishal': 1500,
+      'Nashik-Gangapur': 1400,
+      'Nagpur-Dharampeth': 1450
+    };
+
+    const beltFees = {
+      'white': 800,
+      'yellow': 900,
+      'orange': 900,
+      'green': 1000,
+      'blue': 1000,
+      'purple': 1100,
+      'brown': 1200,
+      'black': 2000
+    };
+
+    const registrationFee = 500;
+
+    function updateFees() {
+      const branch = document.getElementById('branch').value;
+      const belt = document.getElementById('belt').value;
+
+      let totalFee = registrationFee;
+      let branchFee = 0;
+      let beltFee = 0;
+
+      if (branch && branchFees[branch]) {
+        branchFee = branchFees[branch];
+      }
+
+      if (belt && beltFees[belt]) {
+        beltFee = beltFees[belt];
+      }
+
+      totalFee = branchFee + beltFee + registrationFee;
+
+      document.getElementById('branchFee').textContent = `Rs. ${branchFee}`;
+      document.getElementById('beltFee').textContent = `Rs. ${beltFee}`;
+      document.getElementById('totalFee').textContent = `Rs. ${totalFee}`;
+    }
+
+    function simulatePayment(method) {
+      const paymentMethods = document.querySelectorAll('.payment-btn');
+      paymentMethods.forEach(btn => btn.classList.remove('active'));
+
+      const activeBtn = event.target;
+      activeBtn.classList.add('active');
+
+      const paymentStatus = document.getElementById('paymentStatus');
+      const totalFee = document.getElementById('totalFee').textContent;
+
+      paymentStatus.innerHTML = `
+        <span class="payment-icon">✓</span>
+        <span>Processing ${method.toUpperCase()} payment of ${totalFee}...</span>
+      `;
+
+      setTimeout(() => {
+        document.getElementById('paymentDone').value = 'true';
+        paymentStatus.className = 'payment-status completed';
+        paymentStatus.innerHTML = `
+          <span class="payment-icon">✅</span>
+          <span>Payment Completed via ${method.toUpperCase()} - Form ready to submit</span>
+        `;
+
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
+        submitBtn.textContent = 'Submit Form & Save to Excel';
+      }, 1500);
+    }
+
+    function exportToExcel() {
+      const fullname = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const branch = document.getElementById('branch').value;
+      const belt = document.getElementById('belt').value;
+      const totalFee = document.getElementById('totalFee').textContent;
+
+      const ws = XLSX.utils.aoa_to_sheet([
+        ['KEN-EI-MABUNI SHITO-RYU KARATE', '', 'Exam Registration Form'],
+        [],
+        ['Full Name', fullname],
+        ['Email', email],
+        ['Phone', phone],
+        ['Address', address],
+        ['Branch', branch],
+        ['Belt Level', belt],
+        ['Total Fee', totalFee],
+        ['Submission Date', new Date().toLocaleString()],
+        ['Payment Status', 'Completed']
+      ]);
+
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Exam Registration');
+      XLSX.writeFile(wb, `Exam_Registration_${fullname}_${Date.now()}.xlsx`);
+    }
+
+    document.getElementById('branch').addEventListener('change', updateFees);
+    document.getElementById('belt').addEventListener('change', updateFees);
+
+    document.getElementById('examForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (document.getElementById('paymentDone').value !== 'true') {
+        alert('Please complete payment before submitting the form.');
+        return;
+      }
+
+      if (!document.getElementById('fullname').value || !document.getElementById('email').value || 
+          !document.getElementById('phone').value || !document.getElementById('address').value ||
+          !document.getElementById('branch').value || !document.getElementById('belt').value) {
+        alert('Please fill all the required fields.');
+        return;
+      }
+
+      exportToExcel();
+      alert('Form submitted successfully! Excel file has been downloaded.');
+      document.getElementById('examForm').reset();
+      document.getElementById('paymentDone').value = 'false';
+      document.querySelectorAll('.payment-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('paymentStatus').className = 'payment-status pending';
+      document.getElementById('paymentStatus').innerHTML = `
+        <span class="payment-icon">⏳</span>
+        <span>Payment Pending - Select a payment method to proceed</span>
+      `;
+      document.getElementById('submitBtn').style.opacity = '0.5';
+      document.getElementById('submitBtn').style.cursor = 'not-allowed';
+      document.getElementById('submitBtn').textContent = 'Submit Form (Payment Required)';
+    });
+  </script>
+</body>
+</html>
