@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Member avatar illustration</title>
+  <desc id="desc">Illustration representing a karate member profile.</desc>
+  <rect width="420" height="420" rx="32" fill="#0f172a" />
+  <circle cx="210" cy="120" r="76" fill="#fbbf24" opacity="0.15" />
+  <circle cx="210" cy="138" r="56" fill="#e2e8f0" />
+  <path d="M168 248c28-22 76-22 104 0v76H168v-76z" fill="#f8fafc" />
+  <path d="M150 220c14-16 50-20 76 0 16 12 18 36 12 50H146c-4-16-4-36 4-50z" fill="#475569" />
+</svg>

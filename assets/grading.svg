@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
+  <title id="title">Grading and progression illustration</title>
+  <desc id="desc">Illustration representing karate grading and progression.</desc>
+  <rect width="560" height="420" rx="32" fill="#0f172a" />
+  <circle cx="140" cy="130" r="64" fill="#fbbf24" opacity="0.16" />
+  <path d="M120 240l76-18 32 18-14 40-70 8-24-48z" fill="#e2e8f0" />
+  <path d="M332 170h142v16H332z" fill="#334155" />
+  <path d="M332 204h110v18H332z" fill="#475569" />
+  <circle cx="416" cy="270" r="28" fill="#f59e0b" />
+  <circle cx="468" cy="310" r="20" fill="#fbbf24" />
+  <text x="60" y="360" fill="#e2e8f0" font-size="28" font-family="Inter, sans-serif">Grading & Progress</text>
+  <text x="60" y="395" fill="#94a3b8" font-size="16" font-family="Inter, sans-serif">Journey milestones.</text>
+</svg>
