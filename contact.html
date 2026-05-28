@@ -31,13 +31,12 @@
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
           <a href="Training.html">Training</a>
-          
           <a href="members.html">Members</a>
           <a href="representative.html">Representative</a>
-          <a href="resources.html">Resources</a>
+          <a href="resources.html">Resources/Forms</a>
           <a href="affiliations.html">Affiliations</a>
           <a href="branches.html">Branches</a>
-          <a href="exam.html">Exam Form</a>
+          <!--<a href="exam.html">Exam Form</a>-->
           <a href="contact.html">Contact</a>
         </div>
         <div class="navbar-right">
@@ -50,12 +49,16 @@
       </nav>
       <div class="updates-ticker">
         <div class="updates-ticker-content">
-          <div class="ticker-item">🎯 Spring Grading - Register Now!</div>
           <div class="ticker-item">⚡ New Batch Starting - Beginner & Advanced Classes</div>
-          <div class="ticker-item">🏆 Congratulations to Recent Belt Promotions</div>
+          <div class="ticker-item">11th & 12th July 2026 International WSKF seminar At Delhi </div>
+          <div class="ticker-item">19th July 2026 Color Belt exam</div>
           <div class="ticker-item">📢 Special Weekend Workshops - Self-Defense Focus</div>
-          <div class="ticker-item">🎯 Spring Grading - Register Now!</div>
-        </div>
+          <div class="ticker-item">🎯 25th & 26th July 2026 Shito-Ryu National Championship at Mysore selection for WSKF championship Japan </div>
+          <div class="ticker-item">25th to 27th September 2026 WSKF- World Shito-Ryu Karate championships at Japan</div>
+          <div class="ticker-item">23rd to 25th October 2026 Black Belt Exam </div>
+          <div class="ticker-item">25th October Color Belt Exam </div>
+          <div class="ticker-item">22nd November 2026 Shito-Ryu Karate championships at Pune</div>
+          </div>
       </div>
     </header>
 
@@ -74,13 +77,14 @@
           <div class="contact-card">
             <h3>Contact Information</h3>
             <ul class="contact-list">
-              <li><strong>Phone:</strong> 9850543090</li>
+              <li><strong>Phone:</strong> 9850543090<a class="coach-whatsapp-btn" href="https://wa.me/919850543090?text=Hello%20I%20would%20like%20to%20connect%20with%20Coach%20Yogesh%20More" target="_blank" rel="noopener">💬</a></li>
               <li><strong>Email:</strong> <a href="mailto:mhshitoryu@gmail.com">mhshitoryu@gmail.com</a></li>
               <li><strong>Main Branch:</strong> Vidya Vinay Niketan School, Vishal Nagar, Pimple Nilakh, Pune, Maharashtra 411027</li>
             </ul>
             <h3>Communication Options</h3>
             <p>Send your name, email, and message through the form below. Our team will respond as soon as possible.</p>
-            <form class="submit-btn">
+            <form id="contactForm" class="submit-btn" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="f6df6379-b781-4be2-824b-e02601a92ffd">
               <div class="form-field">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -90,17 +94,26 @@
                 <input type="email" id="email" name="email" placeholder="you@example.com" required>
               </div>
               <div class="form-field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+              </div>
+              <div class="form-field">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
               </div>
-              <button type="submit">Send Message</button>
+              
+              <button type="submit">Submit Form</button>
             </form>
+            <p id="contactStatus" class="contact-status" aria-live="polite"></p>
           </div>
 
           <div class="map-card">
             <h3>Dojo Location</h3>
             <iframe class="branch-map" loading="lazy" allowfullscreen 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.4792467813517!2d73.85262187483377!3d18.55005738746819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c8107b0f0d3d%3A0xb7387347b7519448!2sVidya%20Vinay%20Niketan%20School!5e0!3m2!1sen!2sin!4v1705200000000!5m2!1sen!2sin"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7111098534965!2d73.7805997096687!3d18.58705856706922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b95ea2ac0e25%3A0xf23a728f1f5744e8!2sVidya%20Vinay%20Niketan%20School!5e0!3m2!1sen!2sin!4v1720000937247!5m2!1sen!2sin"></iframe>
+           <img src="assets\Logo and other images\poster.jpeg" alt="" style="width: 70%; height: auto;">
+
+          
           </div>
         </div>
       </section>

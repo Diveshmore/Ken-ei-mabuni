@@ -49,12 +49,3 @@ if (themeToggle) {
 }
 
 applyTheme(getPreferredTheme());
-
-const contactForm = document.querySelector('form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    alert('Thank you for reaching out. We will respond as soon as possible.');
-    contactForm.reset();
-  });
-}

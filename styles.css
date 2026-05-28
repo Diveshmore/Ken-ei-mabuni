@@ -131,27 +131,55 @@ textarea {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
+  flex-shrink: 0;
 }
 
 .header-brand {
-  flex: 1;
+  flex: 1 1 0%;
   min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .brand-title {
-  color: var(--text);
+  color: red !important;
   display: block;
   width: 100%;
-  font-size: clamp(1rem, 3vw, 2.2rem);
-  font-weight: 700;
+  max-width: 100%;
+  font-size: clamp(1rem, 2.4vw, 2.5rem) !important;
+  font-weight: 900 !important;
   letter-spacing: 0.04em;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
   text-align: center;
+  padding: 0 0.5rem;
+  line-height: 1.1;
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  .header-logo {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .brand-title {
+    font-size: clamp(0.9rem, 4vw, 1.2rem) !important;
+    padding: 0 0.2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .brand-title {
+    white-space: normal;
+    word-break: break-word;
+    font-size: clamp(0.75rem, 4.4vw, 1rem) !important;
+    line-height: 1.15;
+  }
 }
 
 .navbar {
@@ -211,6 +239,26 @@ textarea {
 .whatsapp-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+
+.coach-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25d366, #20ba5a);
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0 0.75rem;
+  margin-left: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.coach-whatsapp-btn:hover {
+  transform: translateY(-1px);
 }
 
 .page-banner {
@@ -650,7 +698,7 @@ textarea {
 .service-card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0px
 }
 
 .service-card img {
@@ -770,6 +818,55 @@ textarea {
   margin: 0;
 }
 
+@media (max-width: 900px) {
+  .gallery-grid.representative-grid,
+  .gallery-grid.members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .gallery-card {
+    min-height: 270px;
+  }
+
+  .gallery-card img {
+    object-position: center top;
+  }
+
+  .overlay {
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.12), rgba(2, 6, 23, 0.84));
+    align-items: flex-end;
+    padding: 0.9rem;
+  }
+
+  .overlay h3 {
+    font-size: 0.72rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid.representative-grid,
+  .gallery-grid.members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card {
+    min-height: 320px;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+
+  .overlay h3 {
+    font-size: 0.82rem;
+  }
+}
+
 .footer {
   margin-top: auto;
   padding: 1.4rem clamp(1rem, 4vw, 1.5rem);
@@ -865,6 +962,20 @@ textarea {
   padding: 0.95rem 1.2rem;
   color: #111827;
   cursor: pointer;
+}
+
+.contact-status {
+  margin-top: 0.9rem;
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.28);
+  color: var(--text);
+  display: none;
+}
+
+.contact-status.visible {
+  display: block;
 }
 
 footer small {
@@ -1193,6 +1304,7 @@ footer small {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 0;
+    overflow: visible;
   }
   .brand-title {
     font-size: clamp(1rem, 4vw, 1.7rem);
@@ -1231,13 +1343,24 @@ footer small {
   }
 
   .nav-links[data-menu] {
+    /* make the mobile menu float below the navbar and sit above content */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.5rem);
     overflow: hidden;
     max-height: 0;
     opacity: 0;
+    z-index: 9999;
+    padding: 0.75rem 1rem 1rem;
+    background: rgba(8, 15, 29, 0.98);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
   }
 
   .nav-links[data-menu].open {
-    max-height: 600px;
+    overflow: visible;
+    max-height: 80vh;
     opacity: 1;
   }
 
@@ -1248,6 +1371,10 @@ footer small {
 
   .nav-links a:last-child {
     border-bottom: none;
+  }
+
+  body.theme-light .nav-links[data-menu] a {
+    color: white;
   }
 }
 
