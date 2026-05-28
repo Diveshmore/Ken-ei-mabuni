@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
-  <title id="title">Representative illustration</title>
-  <desc id="desc">Illustration representing a representative coach.</desc>
-  <rect width="420" height="420" rx="32" fill="#0f172a" />
-  <circle cx="210" cy="126" r="72" fill="#fbbf24" opacity="0.16" />
-  <circle cx="210" cy="148" r="54" fill="#e2e8f0" />
-  <path d="M162 252c24-20 74-22 102 0v62H162v-62z" fill="#f8fafc" />
-  <path d="M142 224c20-16 60-18 86 0 14 12 18 36 14 48H138c-2-18 0-38 4-48z" fill="#475569" />
-</svg>

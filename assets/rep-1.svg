@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
-  <title id="title">Representative illustration</title>
-  <desc id="desc">Illustration representing an association representative.</desc>
-  <rect width="420" height="420" rx="32" fill="#0f172a" />
-  <circle cx="210" cy="130" r="74" fill="#fbbf24" opacity="0.16" />
-  <circle cx="210" cy="148" r="54" fill="#e2e8f0" />
-  <path d="M160 250c22-20 72-22 100 0v66H160v-66z" fill="#f8fafc" />
-  <path d="M140 220c30-22 70-18 96 0 14 12 18 38 14 52H136c-4-20-2-40 4-52z" fill="#475569" />
-</svg>
